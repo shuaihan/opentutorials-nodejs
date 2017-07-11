@@ -12,12 +12,14 @@ app.get('/', (req, res) => {
     for(let i = 0 ; i < 5 ;i++) {
         lis = lis + '<li>coding</li>';
     }
+    var date = new Date();
     let output = `<!DOCTYPE html>
 <html>
     <head></head>
     <body>
         <h1>Hello dynamic html</h1>
         ${lis}
+        ${date}
     </body>
 </html>        
 `;
