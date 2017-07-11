@@ -19,6 +19,7 @@
   "homepage": "https://github.com/shuaihan/opentutorials-nodejs#readme",
   "dependencies": {
     "express": "^4.15.3",
+    "jade": "^1.11.0",
     "underscore": "^1.8.3"
   }
 }
