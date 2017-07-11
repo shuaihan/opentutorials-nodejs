@@ -7,6 +7,18 @@ app.get('/', (req, res) => {
     res.send("Hello home page");
 });
 
+ app.get('/dynamic', (req, res) => {
+    let output = `<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Hello dynamic html</h1>
+    </body>
+</html>        
+`;
+    res.send(output);
+ });
+
 app.get('/route', (req, res) => {
     res.send("Hello Router, <img src='/router.png' />")
 });
