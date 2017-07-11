@@ -8,11 +8,16 @@ app.get('/', (req, res) => {
 });
 
  app.get('/dynamic', (req, res) => {
+    var lis = '';
+    for(let i = 0 ; i < 5 ;i++) {
+        lis = lis + '<li>coding</li>';
+    }
     let output = `<!DOCTYPE html>
 <html>
     <head></head>
     <body>
         <h1>Hello dynamic html</h1>
+        ${lis}
     </body>
 </html>        
 `;
