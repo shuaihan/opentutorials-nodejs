@@ -6,3 +6,4 @@
 
 # module
 - [uglifyjs](https://www.npmjs.com/package/uglifyjs)
+- [underscore](https://www.npmjs.com/package/underscore)
