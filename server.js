@@ -1,4 +1,7 @@
 const http = require('http');
+const os = require('os');
+
+console.log(os.platform());
  
 const hostname = '127.0.0.1';
 const port = 1337;
