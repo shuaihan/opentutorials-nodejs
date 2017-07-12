@@ -7,6 +7,22 @@ app.set('views', './views');
 
 app.use(express.static('public'));
 
+app.get('/topic', (req, res) => {
+    var topic = [
+        'Javascript is...',
+        'Nodejs is...',
+        'Express is...'
+    ];
+    var output = `
+    <a href="/topic?id=0">Javascript</a>
+    <a href="/topic?id=1">Nodejs</a>
+    <a href="/topic?id=2">Express</a>
+    ${topic[req.query.id]}
+    `
+   // for(let i = 0 ; i < topic.length ; i++) 
+    res.send(output);
+})
+
 app.get('/', (req, res) => {
     res.send("Hello home page");
 });
