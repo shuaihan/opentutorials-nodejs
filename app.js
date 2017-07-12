@@ -23,6 +23,10 @@ app.get('/topic', (req, res) => {
     res.send(output);
 })
 
+app.get('/topic/:id/:mode', (req, res) => {
+    res.send(req.params.id + ' , ' + req.params.mode);
+})
+
 app.get('/', (req, res) => {
     res.send("Hello home page");
 });
