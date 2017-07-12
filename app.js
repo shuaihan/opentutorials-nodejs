@@ -27,6 +27,16 @@ app.get('/topic/:id/:mode', (req, res) => {
     res.send(req.params.id + ' , ' + req.params.mode);
 })
 
+app.get('/form', (req, res) => {
+    res.render('form');
+});
+
+app.get('/form_receiver', (req, res) => {
+    var title = req.query.title;
+    var description = req.query.description;
+    res.send(title + ' ,' + description);
+})
+
 app.get('/', (req, res) => {
     res.send("Hello home page");
 });
