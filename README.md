@@ -9,6 +9,7 @@
 - [underscore](https://www.npmjs.com/package/underscore)
 - [express](https://www.npmjs.com/package/express) 
 - [jade](http://jadelang.net/)
+- [body-parser](https://www.npmjs.com/package/body-parser)
 
 # etc
 - [Semantic URL](https://en.wikipedia.org/wiki/Semantic_URL)

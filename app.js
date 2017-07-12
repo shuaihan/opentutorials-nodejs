@@ -1,11 +1,14 @@
 const express = require('express');
+const bodyParser = require('body-parser')
 
 const app = express();
+
 app.locals.pretty = true;
 app.set('view engine', 'jade');
 app.set('views', './views');
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended : false}));
 
 app.get('/topic', (req, res) => {
     var topic = [
@@ -36,6 +39,12 @@ app.get('/form_receiver', (req, res) => {
     var description = req.query.description;
     res.send(title + ' ,' + description);
 })
+
+app.post('/form_receiver', (req, res) => {
+    var title = req.body.title;
+    var description = req.body.description;
+   res.send(title + ' ,' + description);
+});
 
 app.get('/', (req, res) => {
     res.send("Hello home page");
